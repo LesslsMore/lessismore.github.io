@@ -79,12 +79,12 @@
 
 
 <meta name="description" content="123456789101112131415161718192021wc&#x3D;2*pi*200;wr&#x3D;2*pi*300;rp&#x3D;1;rs&#x3D;25;fs&#x3D;1000;[N,wn]&#x3D;buttord(wc,wr,rp,rs,&#39;s&#39;);[B,A]&#x3D;butter(N,wn,&#39;s&#39;);[num1,den1]&#x3D;i">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Less Is More.">
-<meta property="og:url" content="http://yoursite.com/%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9/%E7%8E%B0%E4%BB%A3%E4%BF%A1%E5%8F%B7.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="现代信号">
+<meta property="og:url" content="http://yoursite.com/2020/03/08/%E7%8E%B0%E4%BB%A3%E4%BF%A1%E5%8F%B7/index.html">
 <meta property="og:site_name" content="Less Is More.">
 <meta property="og:description" content="123456789101112131415161718192021wc&#x3D;2*pi*200;wr&#x3D;2*pi*300;rp&#x3D;1;rs&#x3D;25;fs&#x3D;1000;[N,wn]&#x3D;buttord(wc,wr,rp,rs,&#39;s&#39;);[B,A]&#x3D;butter(N,wn,&#39;s&#39;);[num1,den1]&#x3D;i">
-<meta property="article:published_time" content="2020-05-05T08:04:09.190Z">
+<meta property="article:published_time" content="2020-03-08T09:55:12.745Z">
 <meta property="article:modified_time" content="2019-12-24T08:53:56.484Z">
 <meta property="article:author" content="Less Is More.">
 <meta name="twitter:card" content="summary">
@@ -117,13 +117,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/新建文件夹/现代信号.html"/>
+  <link rel="canonical" href="http://yoursite.com/2020/03/08/现代信号/"/>
 
 
 
 
 
-  <title> | Less Is More.</title>
+  <title>现代信号 | Less Is More.</title>
   
 
 
@@ -230,39 +230,178 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/08/%E7%8E%B0%E4%BB%A3%E4%BF%A1%E5%8F%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Less Is More.">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Less Is More.">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">wc&#x3D;2*pi*200;</span><br><span class="line">wr&#x3D;2*pi*300;</span><br><span class="line">rp&#x3D;1;</span><br><span class="line">rs&#x3D;25;</span><br><span class="line">fs&#x3D;1000;</span><br><span class="line">[N,wn]&#x3D;buttord(wc,wr,rp,rs,&#39;s&#39;);</span><br><span class="line">[B,A]&#x3D;butter(N,wn,&#39;s&#39;);</span><br><span class="line">[num1,den1]&#x3D;impinvar(B,A,fs);%脉冲相应不变法</span><br><span class="line">[h1,w]&#x3D;freqz(num1,den1);</span><br><span class="line">w1&#x3D;2*fs*tan(wc&#x2F;(2*fs));w2&#x3D;2*fs*tan(wr&#x2F;(2*fs));</span><br><span class="line">[N,wn]&#x3D;buttord(w1,w2,rp,rs,&#39;s&#39;)</span><br><span class="line">[B,A]&#x3D;butter(N,wn,&#39;s&#39;);</span><br><span class="line">[num2,den2]&#x3D;bilinear(B,A,fs);%双线性变换法</span><br><span class="line">[h2,w]&#x3D;freqz(num2,den2);</span><br><span class="line">f&#x3D;w&#x2F;pi*500;</span><br><span class="line">plot(f,20*log10(abs(h1)),&#39;-.&#39;,f,20*log10(abs(h2)),&#39;-&#39;);</span><br><span class="line">axis([0,500,-80,10]);grid;</span><br><span class="line">xlabel(&#39;Frequency in Hz&#39;);</span><br><span class="line">ylabel(&#39;Gain in dB&#39;);</span><br><span class="line">title(&#39;巴特沃斯数字低通滤波器&#39;);</span><br><span class="line">legend(&#39;脉冲相应不变法&#39;,&#39;双线性变换法&#39;);</span><br></pre></td></tr></table></figure>
+          <h1 class="post-title" itemprop="name headline">现代信号</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-03-08T17:55:12+08:00">
+                2020-03-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  346
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">wc&#x3D;2*pi*200;</span><br><span class="line">wr&#x3D;2*pi*300;</span><br><span class="line">rp&#x3D;1;</span><br><span class="line">rs&#x3D;25;</span><br><span class="line">fs&#x3D;1000;</span><br><span class="line">[N,wn]&#x3D;buttord(wc,wr,rp,rs,&#39;s&#39;);</span><br><span class="line">[B,A]&#x3D;butter(N,wn,&#39;s&#39;);</span><br><span class="line">[num1,den1]&#x3D;impinvar(B,A,fs);%脉冲相应不变法</span><br><span class="line">[h1,w]&#x3D;freqz(num1,den1);</span><br><span class="line">w1&#x3D;2*fs*tan(wc&#x2F;(2*fs));w2&#x3D;2*fs*tan(wr&#x2F;(2*fs));</span><br><span class="line">[N,wn]&#x3D;buttord(w1,w2,rp,rs,&#39;s&#39;)</span><br><span class="line">[B,A]&#x3D;butter(N,wn,&#39;s&#39;);</span><br><span class="line">[num2,den2]&#x3D;bilinear(B,A,fs);%双线性变换法</span><br><span class="line">[h2,w]&#x3D;freqz(num2,den2);</span><br><span class="line">f&#x3D;w&#x2F;pi*500;</span><br><span class="line">plot(f,20*log10(abs(h1)),&#39;-.&#39;,f,20*log10(abs(h2)),&#39;-&#39;);</span><br><span class="line">axis([0,500,-80,10]);grid;</span><br><span class="line">xlabel(&#39;Frequency in Hz&#39;);</span><br><span class="line">ylabel(&#39;Gain in dB&#39;);</span><br><span class="line">title(&#39;巴特沃斯数字低通滤波器&#39;);</span><br><span class="line">legend(&#39;脉冲相应不变法&#39;,&#39;双线性变换法&#39;);</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E &#x3D; mc^2</span><br></pre></td></tr></table></figure>
 
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">N&#x3D;45;</span><br><span class="line">w1&#x3D;boxcar(N);</span><br><span class="line">w2&#x3D;hamming(N);</span><br><span class="line">w3&#x3D;blackman(N);</span><br><span class="line">[h,w]&#x3D;freqz(w1,N);</span><br><span class="line"></span><br><span class="line">figure(1);</span><br><span class="line">plot(w&#x2F;pi,20*log10(abs(h)));</span><br><span class="line">axis([0,1,-80,10]);</span><br><span class="line">grid on;</span><br><span class="line">xlabel(&#39;归一化频率&#x2F;π&#39;);</span><br><span class="line">ylabel(&#39;幅度&#x2F;dB&#39;);</span><br><span class="line">title(&#39;矩形窗&#39;);</span><br><span class="line"></span><br><span class="line">figure(2);</span><br><span class="line">[h,w]&#x3D;freqz(w2,N);</span><br><span class="line">plot(w&#x2F;pi,20*log10(abs(h)));</span><br><span class="line">axis([0,1,-80,10]);</span><br><span class="line">grid on;</span><br><span class="line">xlabel(&#39;归一化频率&#x2F;π&#39;);</span><br><span class="line">ylabel(&#39;幅度&#x2F;dB&#39;);</span><br><span class="line">title(&#39;汉明窗&#39;);</span><br><span class="line"></span><br><span class="line">figure(3);</span><br><span class="line">[h,w]&#x3D;freqz(w3,N);</span><br><span class="line">plot(w&#x2F;pi,20*log10(abs(h)));</span><br><span class="line">axis([0,1,-150,10]);grid on;</span><br><span class="line">xlabel(&#39;归一化频率&#x2F;π&#39;);</span><br><span class="line">ylabel(&#39;幅度&#x2F;dB&#39;);</span><br><span class="line">title(&#39;布莱克曼窗&#39;);</span><br></pre></td></tr></table></figure>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/08/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/03/08/OpenCV/" rel="prev" title="OpenCV">
+                OpenCV <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -310,6 +449,15 @@
 
           <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
             
 
             
@@ -361,7 +509,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">0</span>
+    <span title="Site words total count">1.2k</span>
   
 </div>
 
